@@ -274,7 +274,7 @@ int SGX_CDECL main(int argc, char *argv[])
     printf("map addr %lx\n", (long)map_addr);
     timeval tvs, tve;
     gettimeofday(&tvs, 0);
-    ret = etime(global_eid, map_addr);
+    ret = etime(global_eid, NULL);
     gettimeofday(&tve, 0);
     if (ret == SGX_SUCCESS) {
 	    printf("success time: %d\n", (tve.tv_sec - tvs.tv_sec) * 1000000 + (tve.tv_usec - tvs.tv_usec));
