@@ -35,15 +35,16 @@
 
 #include <stdlib.h>
 #include <assert.h>
-
+#include "elf_parser.h"
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 void printf(const char *fmt, ...);
 
-void etime(void* addr);
+void etime(void* addr, long length);
 
+void* func_addr(void* addr, const char* func);
 
 #ifdef __cplusplus
 }
